@@ -1,0 +1,85 @@
+/*COLORS:
+
+	blue: #003d73
+	red: #bc0000*/
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	line-height: 1.7;
+	color: #777;
+	padding: 3rem;
+	box-sizing: border-box;
+}
+
+.header {
+	background-color: #003d73;
+	height: 100vh;
+	position: relative;
+}
+
+.header-box {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+}
+
+.header__primary--main,
+.header__primary--sub {
+	color: #fff;
+}
+
+.header__primary--main {
+	font-size: 6rem;
+	font-weight: 400;
+	letter-spacing: .4rem;
+	padding-bottom: 5vh;
+}
+
+.header__primary--sub {
+	letter-spacing: .2rem;
+	padding-bottom: 5vh;
+}
+
+.btn__survey {
+	color: #fff;
+	letter-spacing: 0.2rem;
+}
+
+.btn__survey:hover {
+	color: #fff;
+}
+
+.footer {
+	background-color: #bc0000;
+	height: 10vh;
+	position: relative;
+	bottom: 0;
+	margin-top: 0.1rem;
+}
+
+.footer__text {
+	color: #fff;
+	left: 10%;
+	top: 30%;
+	position: absolute;
+	width: auto;
+	letter-spacing: .15rem;
+}
+
+.footer__text a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
