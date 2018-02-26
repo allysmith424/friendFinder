@@ -1,22 +1,21 @@
-var express = require("express");
-var bodyParser = require("body-parser");
 var path = require("path");
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+module.exports = function(app) {
 
-app.get("/api/friends", function(req, res) {
+	app.get("/api/friends", function(req, res) {
 
-	return res.json(friends);
+		return res.json(friends);
 
-});
+	});
 
-app.post("/api/new", function(req, res) {
+	app.post("/api/new", function(req, res) {
 
-	var newFriend = req.body;
+		var newFriend = req.body;
 
-	friends.push(newFriend);
+		friends.push(newFriend);
 
-	res.json(newFriend);
+		res.json(newFriend);
 
-});
+	});
+
+}
