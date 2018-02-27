@@ -266,48 +266,31 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-
-		var Friend = function(name, photo, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10) {
-
-			this.name = name,
-			this.photo = photo,
-			this.q1 = q1,
-			this.q2 = q2,
-			this.q3 = q3,
-			this.q4 = q4,
-			this.q5 = q5,
-			this.q6 = q6,
-			this.q7 = q7,
-			this.q8 = q8,
-			this.q9 = q9,
-			this.q10 = q10
-
-		};
 		
 		$(".form__submit-btn").on("click", function(e) {
 
 			e.preventDefault();
 
-			var name = $("#form__name").val().trim();
-			var photo = $("#form__photo-link").val().trim();
-			var q1 = $("#form__q1").val();
-			var q2 = $("#form__q2").val();
-			var q3 = $("#form__q3").val();
-			var q4 = $("#form__q4").val();
-			var q5 = $("#form__q5").val();
-			var q6 = $("#form__q6").val();
-			var q7 = $("#form__q7").val();
-			var q8 = $("#form__q8").val();
-			var q9 = $("#form__q9").val();
-			var q10 = $("#form__q10").val();
+			var newFriend = {
 
-			var newFriend = new Friend(name, photo, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10);
+				"name": $("#form__name").val().trim(),
+				"photo": "images/ally.jpeg",
+				"q1": $("#form__q1").val(),
+				"q2": $("#form__q2").val(),
+				"q3": $("#form__q3").val(),
+				"q4": $("#form__q4").val(),
+				"q5": $("#form__q5").val(),
+				"q6": $("#form__q6").val(),
+				"q7": $("#form__q7").val(),
+				"q8": $("#form__q8").val(),
+				"q9": $("#form__q9").val(),
+				"q10": $("#form__q10").val()
 
-			console.log(newFriend);
+			};
 
-			$.post("/api/new", newFriend);
+			$.post("/api/new", newFriend)
 			.then(function(data) {
-				// console.log(data);
+				console.log(data);
 			});
 
 		});

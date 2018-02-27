@@ -5,14 +5,14 @@ var friends = [
 		"name": "Vladimiras Hooper",
 		"photo": "../public/images/ally.jpeg",
 		"q1": 2,
-		"q2": 5,
-		"q3": 2,
-		"q4": 1,
-		"q5": 4,
-		"q6": 4,
-		"q7": 2,
-		"q8": 1,
-		"q9": 2,
+		"q2": 3,
+		"q3": 1,
+		"q4": 4,
+		"q5": 5,
+		"q6": 3,
+		"q7": 4,
+		"q8": 2,
+		"q9": 5,
 		"q10": 4
 
 	}, {
@@ -153,4 +153,69 @@ var friends = [
 
 ];
 
-module.exports = friends;
+function compare(friend1, friend2) {
+
+	var total = 0;
+
+	for (var key in friend2) {
+
+		if (!isNaN(friend2[key])) {
+
+			total += Math.abs(parseInt(friend2[key]) - parseInt(friend1[key]));
+
+		}
+
+	}
+
+	friend2.total = total;
+
+}
+
+function compareLoop() {
+
+	for (var i = 0; i < friends.length; i++) {
+
+		friends[i].total = 0;
+
+	}
+
+	for (var i = 1; i < friends.length; i++) {
+
+		compare(friends[0], friends[i]);
+
+	}
+
+}
+
+function findMatch() {
+
+	var currentBest = 1000000;
+	var bestMatch;
+
+	for (var i = 1; i < friends.length; i++) {
+
+		console.log(friends[i].name + ": " + friends[i].total);
+
+		if (friends[i].total < currentBest) {
+
+			currentBest = friends[i].total;
+
+			bestMatch = friends[i];
+
+		}
+
+	}
+
+	console.log(bestMatch.name);
+
+}
+
+compareLoop();
+
+findMatch();
+
+
+
+
+
+
