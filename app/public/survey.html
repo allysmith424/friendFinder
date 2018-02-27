@@ -21,9 +21,36 @@
 
 		<span class="header__text">Friend Finder</span>
 
-		<span class="header__icon"><i class="fas fa-home"></i></span>
+		<a href="/"><span class="header__icon"><i class="fas fa-home"></i></span></a>
 
 	</header>
+
+	<div id="friendModal" class="modal">
+
+	  <div class="modal__content row">
+
+	  	<div class="modal__img-div five columns">
+
+	    	<img class="modal__img .img-max-full-width" src="#">
+
+	    </div>
+
+	    <div class="modal__text seven columns">
+
+		    <h4 class="modal__text-sub">
+		    	You should become friends with...
+		    </h4>
+		    <h3 class="modal__text-primary">	
+		    	⭐ <span class=modal__friend-name>Ally Smith</span> ⭐
+		    </h3>
+
+		    <span class="modal__close">&times;</span>
+
+	    </div>
+
+	  </div>
+
+	</div>
 
 	<div class="main-container questions__section">
 		
@@ -255,7 +282,7 @@
 		
 		<div class="footer__text">
 
-			<span><a href="#">API Friends List</a></span> | <span><a href="#">GitHub Repo</a></span>
+			<span><a href="/api/friends">API Friends List</a></span> | <span><a href="https://github.com/allysmith424/friendFinder">GitHub Repo</a></span>
 
 		</div>
 
@@ -271,27 +298,51 @@
 
 			e.preventDefault();
 
-			var newFriend = {
+			if ($("#form__name").val() === "" || $("#form__photo-link").val() === "" || $("#form__q1").val() === "select" || $("#form__q2").val() === "select" || $("#form__q3").val() === "select" || $("#form__q4").val() === "select" || $("#form__q5").val() === "select" || $("#form__q6").val() === "select" || $("#form__q7").val() === "select" || $("#form__q8").val() === "select" || $("#form__q9").val() === "select" || $("#form__q10").val() === "select") { 
 
-				"name": $("#form__name").val().trim(),
-				"photo": "images/ally.jpeg",
-				"q1": $("#form__q1").val(),
-				"q2": $("#form__q2").val(),
-				"q3": $("#form__q3").val(),
-				"q4": $("#form__q4").val(),
-				"q5": $("#form__q5").val(),
-				"q6": $("#form__q6").val(),
-				"q7": $("#form__q7").val(),
-				"q8": $("#form__q8").val(),
-				"q9": $("#form__q9").val(),
-				"q10": $("#form__q10").val()
+				$("form").append("<p class='form__validate-text'>Please fill in all questions...</p>");
 
-			};
+			}
 
-			$.post("/api/new", newFriend)
-			.then(function(data) {
-				console.log(data);
-			});
+			else {
+
+				var newFriend = {
+
+					"name": $("#form__name").val().trim(),
+					"photo": "images/ally.jpeg",
+					"q1": $("#form__q1").val(),
+					"q2": $("#form__q2").val(),
+					"q3": $("#form__q3").val(),
+					"q4": $("#form__q4").val(),
+					"q5": $("#form__q5").val(),
+					"q6": $("#form__q6").val(),
+					"q7": $("#form__q7").val(),
+					"q8": $("#form__q8").val(),
+					"q9": $("#form__q9").val(),
+					"q10": $("#form__q10").val()
+
+				};
+
+				$.post("/api/new", newFriend)
+				.then(function(data) {
+
+					$(".modal").show();
+
+					$("#form__name, #form__photo-link").val("");
+					$("#form__q1, #form__q2, #form__q3, #form__q4, #form__q5, #form__q6, #form__q7, #form__q8, #form__q9, #form__q10").val("Select an option");
+
+					$(".modal__image").attr("src", data.photo);
+					$(".modal__friend-name").text(data.name);
+
+				});
+
+			}
+
+		});
+
+		$(document).on("click", ".modal__close", function() {
+
+			$(".modal").hide();
 
 		});
 

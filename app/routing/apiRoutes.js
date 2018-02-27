@@ -75,7 +75,7 @@ module.exports = function(app) {
 
 		friends.push(newFriend);
 
-		res.json(newFriend);
+		res.json(bestMatch);
 
 	});
 

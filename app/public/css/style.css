@@ -78,6 +78,7 @@ body {
 	position: absolute;
 	width: auto;
 	letter-spacing: .15rem;
+	font-weight: 100;
 }
 
 .footer__text a {

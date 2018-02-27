@@ -3,7 +3,7 @@ var friends = [
 	{
 
 		"name": "Vladimiras Hooper",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/vladimiras.jpeg",
 		"q1": 2,
 		"q2": 5,
 		"q3": 2,
@@ -18,7 +18,7 @@ var friends = [
 	}, {
 
 		"name": "Fern D'angelo",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/fern.jpeg",
 		"q1": 3,
 		"q2": 4,
 		"q3": 2,
@@ -33,7 +33,7 @@ var friends = [
 	}, {
 
 		"name": "Catahecassa Rocca",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/catahecassa.jpeg",
 		"q1": 2,
 		"q2": 4,
 		"q3": 5,
@@ -48,7 +48,7 @@ var friends = [
 	}, {
 
 		"name": "Markus Sokal",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/markus.jpeg",
 		"q1": 1,
 		"q2": 4,
 		"q3": 2,
@@ -62,7 +62,7 @@ var friends = [
 
 	}, {
 		"name": "Zephania Lee",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/zephania.jpeg",
 		"q1": 3,
 		"q2": 2,
 		"q3": 3,
@@ -77,7 +77,7 @@ var friends = [
 	}, {
 
 		"name": "Orpheus Chilikov",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/orpheus.jpeg",
 		"q1": 2,
 		"q2": 3,
 		"q3": 4,
@@ -92,7 +92,7 @@ var friends = [
 	}, {
 
 		"name": "Trevor Solberg",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/trevor.jpeg",
 		"q1": 3,
 		"q2": 4,
 		"q3": 4,
@@ -107,7 +107,7 @@ var friends = [
 	}, {
 
 		"name": "Lucretia Janzen",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/lucretia.jpeg",
 		"q1": 3,
 		"q2": 3,
 		"q3": 4,
@@ -122,7 +122,7 @@ var friends = [
 	}, {
 
 		"name": "Iona Begbie",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/iona.jpeg",
 		"q1": 2,
 		"q2": 4,
 		"q3": 3,
@@ -137,7 +137,7 @@ var friends = [
 	}, {
 
 		"name": "Finnur Hayden",
-		"photo": "../public/images/ally.jpeg",
+		"photo": "../public/images/finnur.jpeg",
 		"q1": 1,
 		"q2": 3,
 		"q3": 4,
