@@ -31,14 +31,14 @@
 
 	  	<div class="modal__img-div five columns">
 
-	    	<img class="modal__img .img-max-full-width" src="#">
+	    	<img class="modal__img .u-max-full-width" src="images/blank.jpg">
 
 	    </div>
 
 	    <div class="modal__text seven columns">
 
 		    <h4 class="modal__text-sub">
-		    	You should become friends with...
+		    	You'd get along <em>famously</em> with...
 		    </h4>
 		    <h3 class="modal__text-primary">	
 		    	⭐ <span class=modal__friend-name>Ally Smith</span> ⭐
@@ -86,7 +86,7 @@
 
 			    <div class="six columns">
 
-			    	<label>Your mind is always buzzing with unexplored ideas and plans.</label>
+			    	<label>When medication says "do not operate heavy machinery" they're probably referring to cars, but my mind always goes to forklifts.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q1">
 
@@ -103,7 +103,7 @@
 
 			    <div class="six columns">
 
-			    	<label>Generally speaking, you rely more on your experience than your imagination.</label>
+			    	<label>It makes sense that the target audience for fidget spinners lost interest in them so quickly.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q2">
 
@@ -124,7 +124,7 @@
 
 			    <div class="six columns">
 
-			    	<label>You find it easy to stay relaxed and focused even when there is some pressure.</label>
+			    	<label>"Bob's Burgers" would also be an appropriate title for SpongeBob SquarePants.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q3">
 
@@ -141,7 +141,7 @@
 
 			    <div class="six columns">
 
-			    	<label>You rarely do something just out of sheer curiosity.</label>
+			    	<label>Social anxiety is basically Conspiracy Theories about yourself.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q4">
 
@@ -162,7 +162,7 @@
 
 			    <div class="six columns">
 
-			    	<label>People can rarely upset you.</label>
+			    	<label>Going to bed without having to set an alarm is one of the most satisfying feelings ever.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q5">
 
@@ -179,7 +179,7 @@
 
 			    <div class="six columns">
 
-			    	<label>It is often difficult for you to relate to other people’s feelings.</label>
+			    	<label>One of the worst feelings is the feeling of your sleeves sliding down you wrists as you wash your hands.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q6">
 
@@ -200,7 +200,7 @@
 
 			    <div class="six columns">
 
-			    	<label>In a discussion, truth should be more important than people’s sensitivities.</label>
+			    	<label>Scotch aged 12 years sounds a lot better than Scotch from 2005.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q7">
 
@@ -217,7 +217,7 @@
 
 			    <div class="six columns">
 
-			    	<label>You rarely get carried away by fantasies and ideas.</label>
+			    	<label>Pirates have always seemed good about employing people with physical disabilities.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q8">
 
@@ -238,7 +238,7 @@
 
 			    <div class="six columns">
 
-			    	<label>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+			    	<label>When you think about it, Shakespeare WAS the result of billions of monkeys trying to write stuff randomly for millions of years.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q9">
 
@@ -255,7 +255,7 @@
 
 			    <div class="six columns">
 
-			    	<label>You feel more energetic after spending time with a group of people.</label>
+			    	<label>"Based on a true story" movies are all part of the same series.</label>
 
 			    	<select class="u-full-width" type="text" class="form__question" id="form__q10">
 
@@ -293,6 +293,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
+
+		// $("#testImg").attr("src", "images/iona.jpg");
 		
 		$(".form__submit-btn").on("click", function(e) {
 
@@ -329,9 +331,9 @@
 					$(".modal").show();
 
 					$("#form__name, #form__photo-link").val("");
-					$("#form__q1, #form__q2, #form__q3, #form__q4, #form__q5, #form__q6, #form__q7, #form__q8, #form__q9, #form__q10").val("Select an option");
+					$("#form__q1, #form__q2, #form__q3, #form__q4, #form__q5, #form__q6, #form__q7, #form__q8, #form__q9, #form__q10").val("select");
 
-					$(".modal__image").attr("src", data.photo);
+					$(".modal__img").attr("src", data.photo);
 					$(".modal__friend-name").text(data.name);
 
 				});

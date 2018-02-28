@@ -104,6 +104,7 @@ body {
     border: .1rem solid #888;
     width: 50%;
     position: relative;
+    animation: moveInBottom 1s ease-out;
 }
 
 .modal__close {
@@ -132,6 +133,18 @@ body {
 }
 
 .modal__text-primary{
-	font-size: 3.4rem;
+	font-size: 3rem;
+}
+
+@keyframes moveInBottom {
+	0% {
+		transform: translateY(-5rem);
+	}
+	80% {
+		transform: translateY(1rem);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
 
