@@ -35,7 +35,7 @@ One of the more interesting challenges was matching user results to the database
 .
 ### UI / UX
 
-As always I kept it relatively simple. I used the CSS framework Skeleton, which is one of my favorites. I love how slim it is, allowing me to manipulate exactly what I want to very easily. And the grid, with its built-in padding is very comfortable to work with.
+As always I kept it relatively simple. I used the CSS framework Skeleton, which is one of my favorites. I love how slim it is, allowing me to manipulate exactly what I want to very easily. And the grid, with its built-in padding, is very comfortable to work with.
 
 The landing page incorporates several CSS animations to give the user a slightly jazzy welcome. The survey page is more functional, with two columns of questions on the desktop, which becomes one column on mobile.
 
