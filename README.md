@@ -32,7 +32,9 @@ The app was built with HTML, CSS, Javascript and jQuery in the front end. Expres
 
 One of the more interesting challenges was matching user results to the database. It turned out to be relatively simple - giving the options a numerical score, totalling them, then finding the character whose total is closest to that which the user just posted. But I enjoyed working this out, and considering the limitations of doing it this way.
 
-I decided not to use MySQL of MongoDB for the database, instead just using a JSON file. This is because it was relatively little information and didn't require the rigidity of a schema.\
+I decided not to use MySQL of MongoDB for the database, instead just using a JSON file. This is because it was relatively little information and didn't require the rigidity of a schema.
+
+Validation was required to prevent the user from submitting without a name or image or responses to every question. This was done on the front end.\
 .\
 .
 ### UI / UX
