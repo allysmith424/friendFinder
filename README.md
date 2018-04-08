@@ -30,7 +30,9 @@ Clicking the submit button triggers a modal that displays the result from the co
 
 The app was built with HTML, CSS, Javascript and jQuery in the front end. Express and Node are the technologies facilitating the back end.
 
-One of the more interesting challenges was matching user results to the database. It turned out to be relatively simple - giving the options a numerical score, totalling them, then finding the character whose total is closest to that which the user just posted. But I enjoyed working this out, and considering the limitations of doing it this way.\
+One of the more interesting challenges was matching user results to the database. It turned out to be relatively simple - giving the options a numerical score, totalling them, then finding the character whose total is closest to that which the user just posted. But I enjoyed working this out, and considering the limitations of doing it this way.
+
+I decided not to use MySQL of MongoDB for the database, instead just using a JSON file. This is because it was relatively little information and didn't require the rigidity of a schema.\
 .\
 .
 ### UI / UX
